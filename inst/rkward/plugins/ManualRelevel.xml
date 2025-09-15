@@ -1,0 +1,31 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="ManualRelevel.js" />
+	<help file="ManualRelevel.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="Manually Relevel Factor">
+		<row id="row_vrslFLSFLS">
+			<varselector id="relevel_selector" />
+			<column id="clm_vrsltdrFLS">
+				<varslot id="relevel_factor" label="Factor vector to relevel" source="relevel_selector" required="true" />
+				<input label="Levels to move to front (e.g., c('b', 'c'))" id="relevel_levels" />
+				<saveobject label="Save new factor as" checkable="true" checked="true" initial="factor.releveled" id="relevel_save_obj" />
+			</column>
+		</row>
+	</dialog>
+</document>

@@ -1,0 +1,30 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="DropLevels.js" />
+	<help file="DropLevels.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="Drop Unused Factor Levels">
+		<row id="row_vrslctFSFS">
+			<varselector id="drop_selector" />
+			<column id="clm_vrsltddrFS">
+				<varslot id="drop_factor" label="Factor vector to modify" source="drop_selector" required="true" />
+				<saveobject label="Save new factor as" checkable="true" checked="true" initial="factor.dropped" id="drop_save_obj" />
+			</column>
+		</row>
+	</dialog>
+</document>

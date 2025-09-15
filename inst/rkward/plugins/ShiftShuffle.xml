@@ -1,0 +1,35 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="ShiftShuffle.js" />
+	<help file="ShiftShuffle.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="Shift or Shuffle Factor Levels">
+		<row id="row_vFFCRN1SFF">
+			<varselector id="shift_selector" />
+			<column id="clm_vrsFFCRN1S">
+				<varslot id="shift_factor" label="Factor vector" source="shift_selector" required="true" />
+				<dropdown id="shift_func" label="Function">
+					<option label="Cycle levels (fct_shift)" value="fct_shift" checked="true" />
+					<option label="Randomly shuffle levels (fct_shuffle)" value="fct_shuffle" />
+				</dropdown>
+				<spinbox label="Number of positions to shift (n)" id="shift_n" initial="1" />
+				<saveobject label="Save new factor as" checkable="true" checked="true" initial="factor.shifted" id="shift_save_obj" />
+			</column>
+		</row>
+	</dialog>
+</document>

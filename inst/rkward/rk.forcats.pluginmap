@@ -1,0 +1,182 @@
+<!DOCTYPE
+	rkpluginmap
+>
+<document
+	base_prefix=""
+	namespace="ReorderByProperty"
+	id="ReorderByProperty_rkward"
+	po_id="ReorderByProperty_rkward"
+	priority="medium"
+>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<about
+		name="rk.forcats"
+		shortinfo="An RKWard plugin package for factor manipulation using the 'forcats' library."
+		longinfo="An RKWard plugin package for factor manipulation using the 'forcats' library."
+		version="0.1.5"
+		releasedate="2025-09-15"
+		url="https://github.com/AlfCano/rk.forcats"
+		license="GPL (&gt;= 3)"
+	>
+		<author
+			given="Alfonso"
+			family="Cano"
+			email="alfonso.cano@correo.buap.mx"
+			role="aut, cre"
+		/>
+	</about>
+	<require
+		map="rkward::menu"
+	/>
+	<require
+		map="rkward::embedded"
+	/>
+	<components>
+		<component
+			id="cmp_ReorderByPropertyRrdrByVr"
+			label="ReorderByVar"
+			type="standard"
+			file="plugins/ReorderByVar.xml"
+		>
+		</component>
+		<component
+			id="cmp_ReorderByPropertyManlRlvl"
+			label="ManualRelevel"
+			type="standard"
+			file="plugins/ManualRelevel.xml"
+		>
+		</component>
+		<component
+			id="cmp_ReorderByProprtyShftShffl"
+			label="ShiftShuffle"
+			type="standard"
+			file="plugins/ShiftShuffle.xml"
+		>
+		</component>
+		<component
+			id="cmp_ReorderByPropertyDropLvls"
+			label="DropLevels"
+			type="standard"
+			file="plugins/DropLevels.xml"
+		>
+		</component>
+		<component
+			id="cmp_RerdrByPrprtyRrdrByPrprty"
+			label="ReorderByProperty"
+			type="standard"
+			file="plugins/ReorderByProperty.xml"
+		>
+		</component>
+	</components>
+	<hierarchy>
+		<menu
+			id="data"
+			label="Data"
+		>
+			<menu
+				id="FactorToolsforcats"
+				label="Factor Tools (forcats)"
+			>
+				<menu
+					id="ReorderbyOtherVariable"
+					label="Reorder by Other Variable"
+				>
+					<entry
+						component="cmp_ReorderByPropertyRrdrByVr"
+					/>
+				</menu>
+			</menu>
+		</menu>
+		<menu
+			id="data"
+			label="Data"
+		>
+			<menu
+				id="FactorToolsforcats"
+				label="Factor Tools (forcats)"
+			>
+				<menu
+					id="ManuallyRelevel"
+					label="Manually Relevel"
+				>
+					<entry
+						component="cmp_ReorderByPropertyManlRlvl"
+					/>
+				</menu>
+			</menu>
+		</menu>
+		<menu
+			id="data"
+			label="Data"
+		>
+			<menu
+				id="FactorToolsforcats"
+				label="Factor Tools (forcats)"
+			>
+				<menu
+					id="ShiftorShuffleLevels"
+					label="Shift or Shuffle Levels"
+				>
+					<entry
+						component="cmp_ReorderByProprtyShftShffl"
+					/>
+				</menu>
+			</menu>
+		</menu>
+		<menu
+			id="data"
+			label="Data"
+		>
+			<menu
+				id="FactorToolsforcats"
+				label="Factor Tools (forcats)"
+			>
+				<menu
+					id="DropUnusedLevels"
+					label="Drop Unused Levels"
+				>
+					<entry
+						component="cmp_ReorderByPropertyDropLvls"
+					/>
+				</menu>
+			</menu>
+		</menu>
+		<menu
+			id="data"
+			label="Data"
+		>
+			<menu
+				id="FactorToolsforcats"
+				label="Factor Tools (forcats)"
+			>
+				<menu
+					id="ReorderbyProperty"
+					label="Reorder by Property"
+				>
+					<entry
+						component="cmp_RerdrByPrprtyRrdrByPrprty"
+					/>
+				</menu>
+			</menu>
+		</menu>
+	</hierarchy>
+	<!--
+		<context
+			id="x11"
+		>
+		</context>
+	-->
+	<!--
+		<context
+			id="import"
+		>
+		</context>
+	-->
+</document>

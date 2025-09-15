@@ -1,0 +1,33 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="ReorderByVar.js" />
+	<help file="ReorderByVar.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<!--
+			<convert id="!edit!" sources="!edit!" mode="equals" standard="!edit!" />
+		-->
+		<!--
+			<connect governor="!edit!.state" client="!edit!.enabled" />
+		-->
+	</logic>
+	<dialog label="Reorder Factor by Other Variables">
+		<row id="row_vFVS2U21SF">
+			<varselector id="reorder_selector" />
+			<column id="clm_vrFVS2U21S">
+				<varslot id="reorder_factor" label="Factor to reorder (f)" source="reorder_selector" required="true" />
+				<varslot id="reorder_x" label="Variable to order by (.x)" source="reorder_selector" required="true" />
+				<varslot id="reorder_y" label="Second variable (.y, for fct_reorder2)" source="reorder_selector" />
+				<checkbox id="reorder_func_cbox" label="Use two variables (fct_reorder2)" value="1" />
+				<saveobject label="Save new factor as" checkable="true" checked="true" initial="factor.reordered.byvar" id="reorder_save_obj" />
+			</column>
+		</row>
+	</dialog>
+</document>

@@ -1,0 +1,17 @@
+Package: rk.forcats
+Type: Package
+Title: An RKWard plugin package for factor manipulation using the
+        'forcats' library.
+Version: 0.1.5
+Date: 2025-09-15
+Author: Alfonso Cano
+Maintainer: Alfonso Cano <alfonso.cano@correo.buap.mx>
+Enhances: rkward
+Description: An RKWard plugin package for factor manipulation using the
+        'forcats' library.
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyLoad: yes
+URL: https://github.com/AlfCano/rk.forcats
+Authors@R: person(given="Alfonso", family="Cano",
+        email="alfonso.cano@correo.buap.mx", role=c("aut", "cre"))
