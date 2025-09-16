@@ -15,18 +15,16 @@ function calculate(is_preview){
 	// the R code to be evaluated
 
     var factor_var = getValue("drop_factor");
-    var save_name = getValue("drop_save_obj.objectname");
-    echo(save_name + " <- fct_drop(" + factor_var + ")\n");
+    echo("factor.dropped <- fct_drop(" + factor_var + ")\n");
   
 }
 
 function printout(is_preview){
 	// printout the results
 	new Header(i18n("DropLevels results")).print();
-
-    if(getValue("drop_save_obj") == "1"){
-        var save_name = getValue("drop_save_obj.objectname");
-        echo("rk.header(\"Factor modified and saved as: " + save_name + "\");\n");
+{
+    var save_name = getValue("drop_save_obj.objectname");
+      echo("rk.header(\"Factor modified and saved as: " + save_name + "\", level=3);\n");
     }
   
 	//// save result object

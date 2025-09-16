@@ -20,9 +20,9 @@ function calculate(is_preview){
     var save_name = getValue("shift_save_obj.objectname");
     var command;
     if (func == "fct_shift") {
-        command = save_name + " <- fct_shift(" + factor_var + ", n=" + n + ")";
+        command = "factor.shifted <- fct_shift(" + factor_var + ", n=" + n + ")";
     } else {
-        command = save_name + " <- fct_shuffle(" + factor_var + ")";
+        command = "factor.shifted <- fct_shuffle(" + factor_var + ")";
     }
     echo(command + "\n");
   
@@ -31,10 +31,9 @@ function calculate(is_preview){
 function printout(is_preview){
 	// printout the results
 	new Header(i18n("ShiftShuffle results")).print();
-
-    if(getValue("shift_save_obj") == "1"){
-        var save_name = getValue("shift_save_obj.objectname");
-        echo("rk.header(\"Factor modified and saved as: " + save_name + "\");\n");
+{
+          var save_name = getValue("shift_save_obj.objectname");
+        echo("rk.header(\"Factor modified and saved as: " + save_name + "\", level=3);\n");
     }
   
 	//// save result object

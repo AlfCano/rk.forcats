@@ -34,9 +34,9 @@ function calculate(is_preview){
 
     var command;
     if (use_reorder2 == "1" && y_var) {
-        command = save_name + " <- fct_reorder2(" + factor_var + ", " + x_var + ", " + y_var + ")";
+        command = "factor.reordered.byvar <- fct_reorder2(" + factor_var + ", " + x_var + ", " + y_var + ")";
     } else {
-        command = save_name + " <- fct_reorder(" + factor_var + ", " + x_var + ")";
+        command = "factor.reordered.byvar <- fct_reorder(" + factor_var + ", " + x_var + ")";
     }
     echo(command + "\n");
   
@@ -45,10 +45,9 @@ function calculate(is_preview){
 function printout(is_preview){
 	// printout the results
 	new Header(i18n("ReorderByVar results")).print();
-
-    if(getValue("reorder_save_obj") == "1"){
+{
         var save_name = getValue("reorder_save_obj.objectname");
-        echo("rk.header(\"Factor reordered and saved as: " + save_name + "\");\n");
+        echo("rk.header(\"Factor reordered and saved as: " + save_name + "\", level=3);\n");
     }
   
 	//// save result object

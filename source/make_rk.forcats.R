@@ -15,7 +15,7 @@ local({
     ),
     about = list(
       desc = "An RKWard plugin package for factor manipulation using the 'forcats' library.",
-      version = "0.1.5", # Version bumped for hierarchy fix
+      version = "0.1.6",
       url = "https://github.com/AlfCano/rk.forcats",
       license = "GPL (>= 3)"
     )
@@ -69,12 +69,11 @@ local({
     var func = getValue(\"main_func_dropdown\");
     var save_name = getValue(\"main_save_obj.objectname\");
 
-    echo(save_name + ' <- ' + func + '(' + factor_var + ')\\n');
+    echo('factor.reordered <- ' + func + '(' + factor_var + ')\\n');
   "
-  js_print_main <- '
-    if(getValue("main_save_obj") == "1"){
+  js_print_main <- '{
         var save_name = getValue("main_save_obj.objectname");
-        var header_cmd = "rk.header(\\"Factor reordered and saved as: " + save_name + "\\");\\n";
+        var header_cmd = "rk.header(\\"Factor reordered and saved as: " + save_name + "\\", level=3);\\n";
         echo(header_cmd);
     }
   '
@@ -121,16 +120,15 @@ local({
 
     var command;
     if (use_reorder2 == "1" && y_var) {
-        command = save_name + " <- fct_reorder2(" + factor_var + ", " + x_var + ", " + y_var + ")";
+        command = "factor.reordered.byvar <- fct_reorder2(" + factor_var + ", " + x_var + ", " + y_var + ")";
     } else {
-        command = save_name + " <- fct_reorder(" + factor_var + ", " + x_var + ")";
+        command = "factor.reordered.byvar <- fct_reorder(" + factor_var + ", " + x_var + ")";
     }
     echo(command + "\\n");
   '
-  js_print_reorder <- '
-    if(getValue("reorder_save_obj") == "1"){
+  js_print_reorder <- '{
         var save_name = getValue("reorder_save_obj.objectname");
-        echo("rk.header(\\"Factor reordered and saved as: " + save_name + "\\");\\n");
+        echo("rk.header(\\"Factor reordered and saved as: " + save_name + "\\", level=3);\\n");
     }
   '
 
@@ -164,13 +162,12 @@ local({
     var levels = getValue("relevel_levels");
     var save_name = getValue("relevel_save_obj.objectname");
     if (levels) {
-      echo(save_name + " <- fct_relevel(" + factor_var + ", " + levels + ")\\n");
+      echo("factor.releveled <- fct_relevel(" + factor_var + ", " + levels + ")\\n");
     }
   '
-  js_print_relevel <- '
-    if(getValue("relevel_save_obj") == "1"){
+  js_print_relevel <- '{
         var save_name = getValue("relevel_save_obj.objectname");
-        echo("rk.header(\\"Factor releveled and saved as: " + save_name + "\\");\\n");
+        echo("rk.header(\\"Factor releveled and saved as: " + save_name + "\\", level=3);\\n");
     }
   '
 
@@ -207,16 +204,15 @@ local({
     var save_name = getValue("shift_save_obj.objectname");
     var command;
     if (func == "fct_shift") {
-        command = save_name + " <- fct_shift(" + factor_var + ", n=" + n + ")";
+        command = "factor.shifted <- fct_shift(" + factor_var + ", n=" + n + ")";
     } else {
-        command = save_name + " <- fct_shuffle(" + factor_var + ")";
+        command = "factor.shifted <- fct_shuffle(" + factor_var + ")";
     }
     echo(command + "\\n");
   '
-  js_print_shift <- '
-    if(getValue("shift_save_obj") == "1"){
-        var save_name = getValue("shift_save_obj.objectname");
-        echo("rk.header(\\"Factor modified and saved as: " + save_name + "\\");\\n");
+  js_print_shift <- '{
+          var save_name = getValue("shift_save_obj.objectname");
+        echo("rk.header(\\"Factor modified and saved as: " + save_name + "\\", level=3);\\n");
     }
   '
 
@@ -246,13 +242,11 @@ local({
 
   js_calc_drop <- '
     var factor_var = getValue("drop_factor");
-    var save_name = getValue("drop_save_obj.objectname");
-    echo(save_name + " <- fct_drop(" + factor_var + ")\\n");
+    echo("factor.dropped <- fct_drop(" + factor_var + ")\\n");
   '
-  js_print_drop <- '
-    if(getValue("drop_save_obj") == "1"){
-        var save_name = getValue("drop_save_obj.objectname");
-        echo("rk.header(\\"Factor modified and saved as: " + save_name + "\\");\\n");
+  js_print_drop <- '{
+    var save_name = getValue("drop_save_obj.objectname");
+      echo("rk.header(\\"Factor modified and saved as: " + save_name + "\\", level=3);\\n");
     }
   '
 

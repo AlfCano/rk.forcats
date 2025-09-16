@@ -18,7 +18,7 @@ function calculate(is_preview){
     var levels = getValue("relevel_levels");
     var save_name = getValue("relevel_save_obj.objectname");
     if (levels) {
-      echo(save_name + " <- fct_relevel(" + factor_var + ", " + levels + ")\n");
+      echo("factor.releveled <- fct_relevel(" + factor_var + ", " + levels + ")\n");
     }
   
 }
@@ -26,10 +26,9 @@ function calculate(is_preview){
 function printout(is_preview){
 	// printout the results
 	new Header(i18n("ManualRelevel results")).print();
-
-    if(getValue("relevel_save_obj") == "1"){
+{
         var save_name = getValue("relevel_save_obj.objectname");
-        echo("rk.header(\"Factor releveled and saved as: " + save_name + "\");\n");
+        echo("rk.header(\"Factor releveled and saved as: " + save_name + "\", level=3);\n");
     }
   
 	//// save result object
