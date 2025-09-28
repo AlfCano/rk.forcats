@@ -4,8 +4,8 @@
 		this code was generated using the rkwarddev package.
 	perhaps don't make changes here, but in the rkwarddev script instead!
 	-->
-	<code file="ManualRelevel.js" />
-	<help file="ManualRelevel.rkh" />
+	<code file="ManuallyRelevel.js" />
+	<help file="ManuallyRelevel.rkh" />
 	<!--
 		<dependencies>
 		</dependencies>

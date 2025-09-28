@@ -30,17 +30,16 @@ function calculate(is_preview){
     var func = getValue("main_func_dropdown");
     var save_name = getValue("main_save_obj.objectname");
 
-    echo(save_name + ' <- ' + func + '(' + factor_var + ')\n');
+    echo('factor.reordered <- ' + func + '(' + factor_var + ')\n');
   
 }
 
 function printout(is_preview){
 	// printout the results
-	new Header(i18n("Reorder Factor by Property results")).print();
-
-    if(getValue("main_save_obj") == "1"){
+	new Header(i18n("Reorder by Property results")).print();
+{
         var save_name = getValue("main_save_obj.objectname");
-        var header_cmd = "rk.header(\"Factor reordered and saved as: " + save_name + "\");\n";
+        var header_cmd = "rk.header(\"Factor reordered and saved as: " + save_name + "\", level=3);\n";
         echo(header_cmd);
     }
   

@@ -15,7 +15,7 @@ local({
     ),
     about = list(
       desc = "An RKWard plugin package for factor manipulation using the 'forcats' library.",
-      version = "0.1.6",
+      version = "0.1.7",
       url = "https://github.com/AlfCano/rk.forcats",
       license = "GPL (>= 3)"
     )
@@ -133,11 +133,11 @@ local({
   '
 
   reorder_component <- rk.plugin.component(
-      "ReorderByVar",
+      "Reorder by Other Variable",
       xml = list(dialog = reorder_dialog),
       js = list(require="forcats", calculate = js_calc_reorder, printout = js_print_reorder),
       # CORRECTED: "Data" -> "data"
-      hierarchy = list("data", "Factor Tools (forcats)", "Reorder by Other Variable")
+      hierarchy = list("data", "Factor Tools (forcats)")
   )
 
   # =========================================================================================
@@ -172,11 +172,11 @@ local({
   '
 
   relevel_component <- rk.plugin.component(
-      "ManualRelevel",
+      "Manually Relevel",
       xml = list(dialog = relevel_dialog),
       js = list(require="forcats", calculate = js_calc_relevel, printout = js_print_relevel),
       # CORRECTED: "Data" -> "data"
-      hierarchy = list("data", "Factor Tools (forcats)", "Manually Relevel")
+      hierarchy = list("data", "Factor Tools (forcats)")
   )
 
   # =========================================================================================
@@ -217,11 +217,11 @@ local({
   '
 
   shift_component <- rk.plugin.component(
-      "ShiftShuffle",
+      "Shift or Shuffle Levels",
       xml = list(dialog = shift_dialog),
       js = list(require="forcats", calculate = js_calc_shift, printout = js_print_shift),
       # CORRECTED: "Data" -> "data"
-      hierarchy = list("data", "Factor Tools (forcats)", "Shift or Shuffle Levels")
+      hierarchy = list("data", "Factor Tools (forcats)")
   )
 
   # =========================================================================================
@@ -251,11 +251,11 @@ local({
   '
 
   drop_component <- rk.plugin.component(
-      "DropLevels",
+      "Drop Unused Levels",
       xml = list(dialog = drop_dialog),
       js = list(require="forcats", calculate = js_calc_drop, printout = js_print_drop),
       # CORRECTED: "Data" -> "data"
-      hierarchy = list("data", "Factor Tools (forcats)", "Drop Unused Levels")
+      hierarchy = list("data", "Factor Tools (forcats)")
   )
 
   # =========================================================================================
@@ -273,9 +273,9 @@ local({
     rkh = list(help = help_main),
     components = list(reorder_component, relevel_component, shift_component, drop_component),
     pluginmap = list(
-        name = "ReorderByProperty",
+        name = "Reorder by Property",
         # CORRECTED: "Data" -> "data"
-        hierarchy = list("data", "Factor Tools (forcats)", "Reorder by Property")
+        hierarchy = list("data", "Factor Tools (forcats)")
     ),
     create = c("pmap", "xml", "js", "desc", "rkh"),
     load = TRUE,

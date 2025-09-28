@@ -21,7 +21,7 @@ function calculate(is_preview){
 
 function printout(is_preview){
 	// printout the results
-	new Header(i18n("DropLevels results")).print();
+	new Header(i18n("Drop Unused Levels results")).print();
 {
     var save_name = getValue("drop_save_obj.objectname");
       echo("rk.header(\"Factor modified and saved as: " + save_name + "\", level=3);\n");
