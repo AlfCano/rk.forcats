@@ -2,8 +2,8 @@ Package: rk.forcats
 Type: Package
 Title: An RKWard plugin package for factor manipulation using the
         'forcats' library.
-Version: 0.1.6
-Date: 2025-09-16
+Version: 0.1.7
+Date: 2025-09-28
 Author: Alfonso Cano
 Maintainer: Alfonso Cano <alfonso.cano@correo.buap.mx>
 Enhances: rkward

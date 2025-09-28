@@ -44,7 +44,7 @@ function calculate(is_preview){
 
 function printout(is_preview){
 	// printout the results
-	new Header(i18n("ReorderByVar results")).print();
+	new Header(i18n("Reorder by Other Variable results")).print();
 {
         var save_name = getValue("reorder_save_obj.objectname");
         echo("rk.header(\"Factor reordered and saved as: " + save_name + "\", level=3);\n");

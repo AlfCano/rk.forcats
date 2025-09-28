@@ -30,7 +30,7 @@ function calculate(is_preview){
 
 function printout(is_preview){
 	// printout the results
-	new Header(i18n("ShiftShuffle results")).print();
+	new Header(i18n("Shift or Shuffle Levels results")).print();
 {
           var save_name = getValue("shift_save_obj.objectname");
         echo("rk.header(\"Factor modified and saved as: " + save_name + "\", level=3);\n");
