@@ -15,7 +15,7 @@ local({
     ),
     about = list(
       desc = "An RKWard plugin package for factor manipulation using the 'forcats' library.",
-      version = "0.1.7",
+      version = "0.1.8",
       url = "https://github.com/AlfCano/rk.forcats",
       license = "GPL (>= 3)"
     )
