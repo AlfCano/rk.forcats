@@ -1,8 +1,11 @@
 # rk.forcats: forcats Tools for RKWard
 
-![Version](https://img.shields.io/badge/Version-0.1.7-blue.svg)
-![License](https://img.shields.io/badge/License-GPL--3-green.svg)
-![R Version](https://img.shields.io/badge/R-%3E%3D%203.0.0-lightgrey.svg)
+![Version](https://img.shields.io/badge/Version-0.1.8-blue.svg)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![RKWard](https://img.shields.io/badge/Platform-RKWard-green)
+[![R Linter](https://github.com/AlfCano/rk.forcats/actions/workflows/lintr.yml/badge.svg)](https://github.com/AlfCano/rk.forcats/actions/workflows/lintr.yml)
+![AI Gemini](https://img.shields.io/badge/AI-Gemini-4285F4?logo=googlegemini&logoColor=white)
+
 
 This package provides a suite of RKWard plugins that create a graphical user interface for common and powerful functions from the popular `forcats` R package. It is designed to make factor manipulation—a common but often tedious task in R—more accessible and intuitive for RKWard users.
 
@@ -31,6 +34,16 @@ This package installs a new submenu in RKWard: **Data > Factor Tools (forcats)**
 
 *   **Drop Unused Levels:** A utility to remove factor levels that are not present in the data.
     *   `fct_drop()`
+    
+## 🌍 Internationalization
+
+The interface is fully localized to match your RKWard language settings:
+
+*   🇺🇸 **English** (Default)
+*   🇪🇸 **Spanish** (`es`)
+*   🇫🇷 **French** (`fr`)
+*   🇩🇪 **German** (`de`)
+*   🇧🇷 **Portuguese** (Brazil) (`pt_BR`)
 
 ## Requirements
 
