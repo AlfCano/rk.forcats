@@ -1,0 +1,111 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: rk.forcats 0.1.7\n"
+"Report-Msgid-Bugs-To: alfonso.cano@correo.buap.mx\n"
+"POT-Creation-Date: 2026-03-25 09:54-0600\n"
+"PO-Revision-Date: 2026-03-25 09:54-0600\n"
+"Last-Translator: \n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "data"
+msgstr "Daten"
+
+msgid "Factor Tools (forcats)"
+msgstr "Faktor-Werkzeuge (forcats)"
+
+msgid "Reorder Factor Levels by Property"
+msgstr "Faktorstufen nach Eigenschaft neu ordnen"
+
+msgid "Reorders factor levels based on their properties, such as frequency or order of appearance."
+msgstr "Ordnet Faktorstufen basierend auf ihren Eigenschaften, wie Häufigkeit oder Reihenfolge des Auftretens, neu."
+
+msgid "Select a factor vector from any object, choose a reordering method, and specify a name for the new factor object."
+msgstr "Wählen Sie einen Faktorvektor aus einem beliebigen Objekt, wählen Sie eine Umordnungsmethode und geben Sie einen Namen für das neue Faktorobjekt an."
+
+msgid "Factor vector to reorder"
+msgstr "Neu zu ordnender Faktorvektor"
+
+msgid "Reordering Method"
+msgstr "Umordnungsmethode"
+
+msgid "By frequency"
+msgstr "Nach Häufigkeit"
+
+msgid "By order of appearance"
+msgstr "Nach Reihenfolge des Auftretens"
+
+msgid "By numeric value of levels"
+msgstr "Nach numerischem Wert der Stufen"
+
+msgid "Reverse order"
+msgstr "Umgekehrte Reihenfolge"
+
+msgid "Save new factor as"
+msgstr "Neuen Faktor speichern als"
+
+msgid "Reorder Factor by Other Variables"
+msgstr "Faktor nach anderen Variablen neu ordnen"
+
+msgid "Factor to reorder (f)"
+msgstr "Neu zu ordnender Faktor (f)"
+
+msgid "Variable to order by (.x)"
+msgstr "Variable zum Ordnen nach (.x)"
+
+msgid "Second variable (.y, for fct_reorder2)"
+msgstr "Zweite Variable (.y, für fct_reorder2)"
+
+msgid "Use two variables (fct_reorder2)"
+msgstr "Zwei Variablen verwenden (fct_reorder2)"
+
+msgid "Reorder by Other Variable"
+msgstr "Nach anderer Variable neu ordnen"
+
+msgid "Manually Relevel Factor"
+msgstr "Faktorstufen manuell anpassen"
+
+msgid "Factor vector to relevel"
+msgstr "Anzupassender Faktorvektor"
+
+msgid "Levels to move to front (e.g., c('b', 'c'))"
+msgstr "Nach vorne zu verschiebende Stufen (z.B. c('b', 'c'))"
+
+msgid "Manually Relevel"
+msgstr "Manuell anpassen"
+
+msgid "Shift or Shuffle Factor Levels"
+msgstr "Faktorstufen verschieben oder mischen"
+
+msgid "Factor vector"
+msgstr "Faktorvektor"
+
+msgid "Function"
+msgstr "Funktion"
+
+msgid "Cycle levels (fct_shift)"
+msgstr "Stufen zyklisch durchlaufen (fct_shift)"
+
+msgid "Randomly shuffle levels (fct_shuffle)"
+msgstr "Stufen zufällig mischen (fct_shuffle)"
+
+msgid "Number of positions to shift (n)"
+msgstr "Anzahl der zu verschiebenden Positionen (n)"
+
+msgid "Shift or Shuffle Levels"
+msgstr "Stufen verschieben oder mischen"
+
+msgid "Drop Unused Factor Levels"
+msgstr "Ungenutzte Faktorstufen verwerfen"
+
+msgid "Factor vector to modify"
+msgstr "Zu ändernder Faktorvektor"
+
+msgid "Drop Unused Levels"
+msgstr "Ungenutzte Stufen verwerfen"
+
+msgid "Reorder by Property"
+msgstr "Nach Eigenschaft neu ordnen"
